@@ -29,6 +29,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
       params.delete('query');
     }
     replace(`${pathname}?${params.toString()}`);
+    params.set('page', '1');// reset page to 1 when searching
   }, 300);
 
   return (
